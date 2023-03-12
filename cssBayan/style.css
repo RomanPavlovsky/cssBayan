@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(52, 52, 52);
+  display: flex;
+  width: 100vw;
+  height: 35.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.accordion {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+.accordion__container {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+.accordion__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  font-size: 1.9rem;
+}
+
+.accordion__label {
+  border-top: 0.1rem solid rgba(250, 250, 250, 0.6);
+  display: grid;
+  grid-template-columns: 5fr 3rem;
+  grid-template-rows: 3rem 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  overflow: hidden;
+  width: 100%;
+  min-height: 3rem;
+  height: 3rem;
+}
+.accordion__input {
+  appearance: none;
+  visibility: hidden;
+}
+.accordion__name {
+  color: rgba(250, 250, 250, 0.6);
+  font-size: 1.3rem;
+  height: 3rem;
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.accordion__chrest {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: url("./assets/images/add2.svg") no-repeat center;
+  background-size: 1.5rem;
+  opacity: 0.6;
+}
+.accordion__content {
+  margin-bottom: 1rem;
+  grid-area: 2 / 1 / 3 / 3;
+}
+.meme1 {
+  background: url("./assets/images/fullstack.webp") no-repeat center;
+  background-size: contain;
+}
+.meme2 {
+  background: url("./assets/images/css.webp") no-repeat center;
+  background-size: contain;
+}
+.meme3 {
+  background: url("./assets/images/catdeveloper.webp") no-repeat center;
+  background-size: contain;
+}
+.meme4 {
+  background: url("./assets/images/zoom.webp") no-repeat center;
+  background-size: contain;
+}
+.meme5 {
+  background: url("./assets/images/workingCode.webp") no-repeat center;
+  background-size: contain;
+}
+.accordion__input:checked + .accordion__label .accordion__chrest {
+  animation: 0.4s linear 1 spin;
+  -webkit-animation: 0.4s linear 1 spin;
+  -moz-animation: 0.4s linear 1 spin;
+  animation-fill-mode: both;
+  opacity: 1;
+  background: url("./assets/images/add3.svg") no-repeat center;
+  background-size: 1.5rem;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+.accordion__input:checked + .accordion__label {
+  height: 100%;
+  transition: height 0.5s linear;
+  border-top: 0.1rem solid rgb(255, 121, 11);
+}
+.accordion__input:checked + .accordion__label .accordion__name {
+  color: rgb(255, 121, 11);
+}
