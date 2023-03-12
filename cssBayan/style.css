@@ -151,7 +151,7 @@ body {
     width: 90%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (hover: hover) {
   body {
     height: 100vh;
   }
