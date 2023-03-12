@@ -136,3 +136,17 @@ body {
 .accordion__input:checked + .accordion__label .accordion__name {
   color: rgb(255, 121, 11);
 }
+@media (min-width: 620px) {
+  body {
+    height: 45rem;
+  }
+  .accordion__title {
+    font-size: 2.3rem;
+  }
+  .accordion__name {
+    font-size: 1.4rem;
+  }
+  .accordion {
+    padding: 0 2rem;
+  }
+}
